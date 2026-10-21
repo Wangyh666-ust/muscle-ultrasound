@@ -8,7 +8,7 @@ const fmt = (v,n=2) => Number.isFinite(v) ? v.toFixed(n) : '未输出';
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const value = (p,k) => k==='MT' ? p.value_mm : k==='PA' ? p.value_deg : p.selected_mean_mm;
 const line = (a,b,color,width=2,dash=false) => `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${color}" stroke-width="${width}" ${dash?'stroke-dasharray="8 6"':''} vector-effect="non-scaling-stroke"/>`;
-const failText = r => r.apo.status!=='candidate' ? '上下边界支持不足，当前规则拒绝测量。' : current==='im_06_arch' ? '已知边界选择偏差案例：有厚度输出并不意味着选对了边界。' : current==='im_20_arch' ? '已知偏薄案例：PA 选线还包含结构异常诊断，未自动过滤。' : current==='im_29_arch' ? '已知 FL 偏高案例：多条线的一致输出也可能存在共同偏差。' : 'G1 允许交点在画面外，仍限制外推比例 ≤ 80%。输出不等于测量已验证正确。';
+const failText = (r,k) => r.apo.status!=='candidate' ? '上下边界支持不足，当前规则拒绝测量。' : current==='im_06_arch' ? '已知边界选择偏差案例：有厚度输出并不意味着选对了边界。' : current==='im_20_arch' ? '已知偏薄案例：PA 选线还包含结构异常诊断，未自动过滤。' : current==='im_29_arch' ? '已知 FL 偏高案例：多条线的一致输出也可能存在共同偏差。' : r.parameters[k].status!=='ok' ? '当前长度方案没有通过全部接受条件的候选，保留失败，不填零。' : k==='FL_G0' ? 'G0 要求交点位于图像及边界支持区内，并保留外推比例等接受条件。输出不等于测量已验证正确。' : 'G1 允许交点在画面外，仍限制外推比例 ≤ 80%。输出不等于测量已验证正确。';
 
 function choose(id){if(!records.has(id)) return;current=id;el('imageSelect').value=id;render();}
 function draw(r,k){
@@ -47,11 +47,13 @@ function render(){
  el('measurements').innerHTML=parts.map(([k,label,unit,color])=>{
   const p=r.parameters[k],v=value(p,k),ref=r.reference[k],count=p.selected_count||0;
   let detail=`实际选中 ${count} ${k==='MT'?'个位置':'条候选'}`;
+  const invalid=(p.selected_details||[]).filter(d=>d.validity_status==='invalid').length;
+  if(invalid)detail+=` · 结构异常诊断 ${invalid} 条`;
   if(k.startsWith('FL')&&count)detail+=` · 最大外推 ${fmt(Math.max(...p.extrapolation_ratios)*100,1)}%`;
   const comparison=el('showReference').checked?`<div class="metric-reference">专家均值 ${fmt(ref.mean)} ${unit} · ${ref.n} 位<br>${Number.isFinite(v)?'探索性差值 '+(v-ref.mean>=0?'+':'')+fmt(v-ref.mean)+' '+unit:'无输出，不填零、不计算误差'}</div>`:'';
   return `<div class="measurement"><div class="metric-label"><span>${label}</span><span>${k.replace('FL_','')}</span></div><div class="metric-value" style="color:${color}">${fmt(v)}${Number.isFinite(v)?`<small>${unit}</small>`:''}</div><div class="metric-detail">${detail}</div>${comparison}</div>`;
  }).join('');
- el('caseNote').textContent=failText(r);
+ el('caseNote').textContent=failText(r,policy);
  document.querySelectorAll('#featured button').forEach(b=>b.classList.toggle('active',b.dataset.image===current));
  document.querySelectorAll('#viewMode button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
 }
