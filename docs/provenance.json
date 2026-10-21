@@ -1,0 +1,45 @@
+{
+  "export_date": "2026-10-21",
+  "source_commit": "86d6f94e477d6343d1fcc734b5112afc31b35789",
+  "mode": "curated public snapshot; research history not included",
+  "frozen_results_sha256": "2d35d8241c96cad3ae2742f8c33641203f1b10038b1919eb700c986c7df700d4",
+  "exploratory_reference_sha256": "6184f149eda4c9432044271b0e991ad662c9f93637a7858f786a454980b3c249",
+  "code_files": {
+    "scripts/measure_umud.py": "8d5ce88baa150013bcf9b9773918532dcf8f32428c8ef2ececf4f9fe4acf798e",
+    "scripts/candidate_validity.py": "78ea096f2a9066826df03ffa809620d2f90d7a20b0a432b333155ac72b6e4586",
+    "scripts/fascicle_geometry.py": "c5a35672602eda7b90cdb3ff43dd1cbd2e8b26c3b597439854d1c8d0669ec29e",
+    "scripts/fascicle_pa_fl.py": "72b9a1ac32341b5c81b903122982fcba7644d83e52052508c98debce660cbd5d",
+    "scripts/fl_acceptance_policy.py": "d07e3c0009ad739999b9805b1b9637c6e8feab7571d40d92899066448b1a450d",
+    "scripts/pair_selection.py": "05e67e98a258956b08922acb74b376a0d697b5a15492f918ff1b09d391247d86",
+    "scripts/scale_recognition.py": "b2ee0f8f38c49245298850b1bdd7ea57c49723a0522acc48a573c04bade20151",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/umud_baseline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/umud_baseline/apo_baseline.py": "d791c0931fae02034b55bd7bbbf241a79c33e1fb6bb097676c2d859dd0dfbf5d",
+    "src/umud_baseline/data.py": "0e60a305f7ae411b68dbef0912dce5300447f5ac3159bb7076c60ce5bdbcf9c3",
+    "src/umud_baseline/geometry.py": "5299218c11afd8c5fdd214f7ccb5d56a5b24978d9214bb45e58e279ca0da3f81",
+    "src/umud_baseline/train.py": "3dfab37963479b6a3da519603de0653e805bea5d15866238ec0928f0c59abb2d",
+    "src/umud_baseline/evaluate.py": "c8e4cb748217c76a8e90b4084a9b9b09bca3e053dbcb980e4234288a88726a0f",
+    "manifest/apo_pair_selection_rule_v1.json": "d485aec0e2d7d220c973988babee4ca6960b35e74567e06ad3541ec87a6f6e9b",
+    "manifest/apo_pair_selection_rule_v1.sha256": "79a6f202c33b358573a1e837ae87981da13617b73adea25178f4f636077de466",
+    "configs/baseline_apo.json": "9d928c803436491646f7b6d3713b0b3a38cb35bcf186edada6113f196d60432d",
+    "configs/round13_fasc_resnet34_unet_ep18.json": "56579fb43c10141e17cb6f7706bf727cb5bed2ef0f5a2c03c49636def6eb3b9b",
+    "tests/test_geometry.py": "cae257c51ce905d2b3747ddae21e9a9abbbe16026374fa939af8b49c7447201d",
+    "tests/test_fascicle_geometry.py": "fdeea33328a10d88fc7bd6b1f3765f9fa27028e46d53aecb40a6632e21d65811",
+    "tests/test_fascicle_pa_fl.py": "e7eff0c8ad991a33b1ce39491612fe3380fc4e786bd513376ecc03fc4fe502db",
+    "tests/test_candidate_validity.py": "ccec57a1d9c3eac2f57dffe23cb1a70a2449787f6c7b1fa098479d3c99abe9f7"
+  },
+  "selection": "Four illustrative cases chosen after inspecting frozen outputs and exploratory errors; not a random/representative test subset.",
+  "featured_ids": [
+    "im_25_arch",
+    "im_21_arch",
+    "im_16_arch",
+    "im_32_arch"
+  ],
+  "all_34_available": true,
+  "weights_included": false,
+  "training_data_included": false,
+  "checkpoint_sha256": {
+    "apo": "32710a54e1c0b4bb481a1968e981378bab03b5bc18511c97146b8f63099c76bc",
+    "fasc": "7f655bfa0f96ab488fe5493b9b33487afc8873c50042215157370247c0d62a59"
+  }
+}

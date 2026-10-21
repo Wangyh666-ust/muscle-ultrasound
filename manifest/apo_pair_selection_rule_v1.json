@@ -1,0 +1,65 @@
+{
+  "version": "apo_pair_selection_v1",
+  "track_tol_px": 5,
+  "max_gap_columns": 3,
+  "min_track_columns_fraction": 0.05,
+  "min_track_columns_abs": 5,
+  "support_tolerance_fraction": 0.1,
+  "spacing_prior_fraction": 0.358125,
+  "primary_tolerance_px": 10,
+  "primary_coverage_threshold": 0.8,
+  "selection": "candidate pairs with common support >= max(20, 0.25*width); among pairs within support_tolerance_fraction of max support, choose spacing closest to spacing_prior_fraction*height; then use the same line fit/residual/support checks as geometry.py",
+  "train_evidence": {
+    "n_train_samples_used": 80,
+    "n_adjacent_column_differences": 107032,
+    "dy_median_px": 0.0,
+    "dy_p95_px": 0.5,
+    "dy_p99_px": 1.0,
+    "dy_max_px": 7.5,
+    "spacing_fraction_median": 0.358125,
+    "spacing_fraction_p05_p95": [
+      0.2125,
+      0.5075
+    ],
+    "note": "computed from apo train human masks only; dev not read"
+  },
+  "synthetic_checks": {
+    "two_band": {
+      "status": "candidate",
+      "selected_spacing_median": 120.0,
+      "expected_spacing": 120,
+      "ok": true
+    },
+    "three_band_extra_short_below": {
+      "status": "candidate",
+      "selected_spacing_median": 120.0,
+      "expected_spacing": 120,
+      "ok": true
+    },
+    "three_band_extra_short_above": {
+      "status": "candidate",
+      "selected_spacing_median": 120.0,
+      "expected_spacing": 120,
+      "ok": true
+    },
+    "four_band_two_full_two_short": {
+      "status": "candidate",
+      "selected_spacing_median": 120.0,
+      "expected_spacing": 120,
+      "ok": true
+    },
+    "slanted_two_band": {
+      "status": "candidate",
+      "selected_spacing_median": 120.0,
+      "expected_spacing": 120,
+      "ok": true
+    },
+    "double_line_plus_deep": {
+      "status": "candidate",
+      "selected_spacing_median": 120.0,
+      "n_usable_tracks": 3,
+      "note": "no near-run merging is performed; recorded, not required to match"
+    }
+  },
+  "frozen_before_dev": true
+}

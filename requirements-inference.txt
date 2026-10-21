@@ -1,0 +1,10 @@
+# CPU or CUDA PyTorch build must match the execution environment.
+torch>=2.6,<3
+torchvision>=0.21,<1
+numpy>=2,<3
+Pillow>=10,<13
+scipy>=1.12,<2
+segmentation-models-pytorch==0.5.0
+
+# Optional automatic scale-recognition runtime is not needed by the static demo.
+# rapidocr-onnxruntime==1.4.4

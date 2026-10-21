@@ -1,0 +1,2 @@
+# Preserve the source bytes recorded in docs/provenance.json across platforms.
+* -text

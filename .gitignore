@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+external/
+runs/
+*.pt
+*.pth
+*.ckpt
+*.zip
+.env
+.env.*
+*api_key*
+*secret*
+deepseek_api.txt
