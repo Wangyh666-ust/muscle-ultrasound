@@ -1,0 +1,20 @@
+{
+  "task": "fasc",
+  "architecture": "resnet34_unet",
+  "encoder_name": "resnet34",
+  "encoder_weights": "imagenet",
+  "seed": 20261017,
+  "long_side": 1024,
+  "batch_size": 2,
+  "grad_accum": 2,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "epochs": 18,
+  "patience": 10,
+  "lr_patience": 4,
+  "amp": true,
+  "augment": true,
+  "num_workers": 2,
+  "eval_every": 1,
+  "dev_include_view": "runs/geometry_eval/isolation_audit_v1/isolation_view.json"
+}

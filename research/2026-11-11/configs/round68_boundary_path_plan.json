@@ -1,0 +1,119 @@
+{
+  "round": 68,
+  "status": "plan_only_not_executed",
+  "date": "2026-11-09",
+  "training": false,
+  "default_changed": false,
+  "subagents": false,
+  "plan": "thinking/ROUND68_BOUNDARY_PATH_PLAN_20261109.txt",
+  "evidence": "thinking/ROUND67_FAILURE_SCREEN_20261109.txt",
+  "boundary_checkpoint": "runs/round62_augmentation_quality_v1/training/20261023/C/epoch_06_model.pt",
+  "boundary_seed_count": 1,
+  "C1": "B_20261023_frozen_and_affinely_mapped",
+  "baseline": "Round67.S_exact_replay",
+  "history_comparator": "Round67.RX67",
+  "arms": ["S", "W", "J", "X", "WJ", "WX", "JX", "WJX"],
+  "combination_order": ["W", "J", "X"],
+  "primary_comparison": ["WJX", "S"],
+  "fixed": {
+    "input_region_and_reference_width": true,
+    "three_probability_heads": true,
+    "fusion": "role*(0.4+0.6*union)",
+    "raw_candidate_pool_and_thresholds": true,
+    "C1_and_soft_MT_prior": true,
+    "global_target_layer": true,
+    "formal_measurement_definition": true,
+    "GT_decoder_input": false,
+    "maximum_reliable_extension_width_fraction": 0.12,
+    "maximum_speculation_width_fraction": 0.40,
+    "no_left_or_right_preference": true
+  },
+  "development_control_sources": 48,
+  "confirmation_control_sources": 624,
+  "confirmation_is_new_blind_data": false,
+  "normal_controls": {
+    "sides": 2,
+    "orientations": 2,
+    "inputs": 192,
+    "named_protection_cases": ["image_1001.tif", "image_1004.tif"],
+    "coordinate_tolerance": 1e-8,
+    "mirror_tolerance": 1e-4,
+    "support_loss_allowed": 0
+  },
+  "known_cases_not_for_parameter_selection": ["image_0960.tif", "image_0405.tif", "image_1011.tif"],
+  "finite_grids": {
+    "W_minimum_band_width_sigma": [4.0, 6.0],
+    "J_maximum_retreat_width_fraction": [0.12, 0.20],
+    "J_required_heldout_error_improvement": [0.25, 0.50],
+    "X_probability_support_fraction": [0.85, 0.95],
+    "joint_cartesian_search": false
+  },
+  "W_fixed": {
+    "band_probability_levels": [0.35, 0.50, 0.65],
+    "reject_cross_valley_averaging": true,
+    "preserve_original_candidate": true,
+    "no_filling_long_absent_response": true
+  },
+  "J_fixed": {
+    "pool": "existing_hard_weak_rebuilt_same_role_candidates",
+    "raw_endpoint_jump_does_not_veto_before_retreat": true,
+    "requires_independent_stable_fragments": true,
+    "probability_drop_is_not_sole_veto": true,
+    "shape_alone_does_not_authorize_replacement": true,
+    "outside_edit_region_coordinate_changes": 0
+  },
+  "X_fixed": {
+    "minimum_role_probability": 0.18,
+    "minimum_fused_probability": 0.10,
+    "brightness_alone_qualifies": false,
+    "same_band_localization_required": true,
+    "maximum_blind_width_fraction": 0.015,
+    "speculation_counts_as_reliable_recovery": false
+  },
+  "full_scope": {
+    "development_originals": 435,
+    "apo_originals": 153,
+    "dev_originals": 282,
+    "external_originals": 34,
+    "all_originals": 469,
+    "manual_boundary_originals": 143,
+    "manual_original_sides": 286,
+    "additional_perturbations_per_manual_source": 7,
+    "views": 1470,
+    "natural_pairs": 117,
+    "strict_natural_pairs": 18,
+    "failed_modules_retain_shadow_diagnostics": true,
+    "infer_missing_cache_only": true
+  },
+  "planned_gates_not_observed_results": {
+    "controlled_source_positive_rate_each_side": 0.95,
+    "controlled_correct_column_fraction": 0.95,
+    "controlled_position_tolerance_512_pixels": 2.0,
+    "negative_false_reliable_links": 0,
+    "mirror_inconsistencies": 0,
+    "baseline_good_sides": 176,
+    "baseline_good_both_sides_images": 50,
+    "maximum_good_side_coverage_decline_percentage_points": 1.0,
+    "new_reliable_extension_precision_target": 0.95,
+    "zero_recovery_denominator": "NA_not_success",
+    "new_severe_measurement_jumps": 0,
+    "loss_of_previously_complete_measurements": 0
+  },
+  "statistics": {
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261109,
+    "cluster_unit": "source_image_or_existing_similarity_component_not_transformed_frame",
+    "confidence_level": 0.95,
+    "report_upper_and_lower_separately": true,
+    "known_cases_are_not_blind_tests": true
+  },
+  "measurement_audit": {
+    "keep_legacy_observation_adapter": true,
+    "record_actual_used_boundary_points": true,
+    "generated_points_not_promoted_to_original_observations": true,
+    "curve_or_FL_ray_estimates_separate_from_formal": true,
+    "stability_is_not_ground_truth_error": true
+  },
+  "phase_order": ["bind_and_replay", "normal_protection", "independent_controls", "lock_and_historical_confirmation", "known_case_checks_without_retuning", "full_shadow_comparisons"],
+  "outputs": ["report_with_fixed_denominators", "offline_nine_group_gallery", "improved_and_degraded_cases", "module_rejection_and_measurement_use_audit", "updated_checklist"]
+}

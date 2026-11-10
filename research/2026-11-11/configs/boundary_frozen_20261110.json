@@ -1,0 +1,17 @@
+{
+  "status": "research_freeze_before_fascicle_work",
+  "date": "2026-11-10",
+  "primary": "Round74_P_permission_fix",
+  "geometry_manifest": "runs/frozen_boundary_20261110/manifest.json",
+  "loader": "scripts/load_frozen_boundary.py",
+  "reference": "Round72_PH",
+  "candidate_only": "Round74_NL_not_promoted",
+  "boundary_model": "runs/round62_augmentation_quality_v1/training/20261023/C/epoch_06_model.pt",
+  "boundary_seed": 20261023,
+  "c1_for_existing_boundary_selection": "B_20261023_frozen_original_segments",
+  "c1_for_future_comparison": ["B_20261023", "B_20261024"],
+  "independent_edit_permission_required": true,
+  "derived_points_are_not_promoted_to_observations": true,
+  "default_pipeline_changed": false,
+  "new_training_started": false
+}

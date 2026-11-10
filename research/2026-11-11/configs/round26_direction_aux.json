@@ -1,0 +1,28 @@
+{
+  "version": "round26_direction_aux_config_v1",
+  "created_utc": "2026-10-20T00:00:00+00:00",
+  "seed": 20261017,
+  "architecture": "resnet34_unet",
+  "encoder_name": "resnet34",
+  "encoder_weights": "imagenet",
+  "long_side": 1024,
+  "batch_size": 2,
+  "grad_accum": 2,
+  "epochs": 18,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "augment": true,
+  "amp": true,
+  "num_workers": 2,
+  "lambda_dir": 0.1,
+  "arms": {
+    "C0": {"lambda_dir": 0.0, "loss": "Lseg"},
+    "C1": {"lambda_dir": 0.1, "loss": "Lseg + 0.1*Ldir"}
+  },
+  "dev_include_view": "runs/geometry_eval/isolation_audit_v1/isolation_view.json",
+  "eval_epochs": [2, 17],
+  "no_early_stopping": true,
+  "no_lr_scheduler": true,
+  "direction_head": "1x1 Conv2d(decoder_out=16, 2)",
+  "direction_loss": "MSE on (cos2theta,sin2theta), evaluable component pixels only"
+}

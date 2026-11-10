@@ -1,0 +1,19 @@
+{
+  "version": "round35_boundary_continuity_v1",
+  "seeds": [20261023, 20261024],
+  "arms": ["T0", "T1", "T2", "T3"],
+  "new_training_arms": ["T1", "T2", "T3"],
+  "epochs": 18, "long_side": 512, "batch_size": 4, "num_workers": 2,
+  "lr": 0.0001, "weight_decay": 0.0001, "amp": true,
+  "identity_weight": 1.0, "consistency_weight": 0.1, "continuity_weight": 0.1,
+  "skeleton_iterations": 5, "loss_epsilon": 0.000001,
+  "threshold": 0.5,
+  "augmentation": {"geometry_p": 0.5, "angle": 7, "scale": [0.85,1.15], "shift_fraction": 0.05, "pad_p": 0.3, "pad_fraction": 0.1, "noise_p": 0.2, "noise_sigma": 3, "speckle_p": 0.25, "speckle_sigma": [0.03,0.08], "attenuation_p": 0.2, "attenuation_width": [0.1,0.2], "attenuation_factor": [0.75,1.0], "geometry_attempts": 12},
+  "decoder": {"canonical_width": 512, "roi_intensity": 12, "roi_texture_std": 6, "roi_window": 11, "max_paths_per_side": 4, "max_step": 3, "step_penalty": 0.25, "turn_penalty": 0.1, "observation_probability": 0.5, "min_observed_fraction": 0.3, "max_gap_fraction": 0.2, "suppression_radius": 6, "min_path_span_fraction": 0.3, "min_spacing_fraction": 0.005, "union_bonus": 0.15, "containment_weight": 0.5},
+  "transforms": ["identity","scale075","scale125","pad10","scale080","scale120","pad07","pad13"],
+  "datasets": {"apo153":153,"dev282":282,"external34":34},
+  "primary_model": "T0=Round34 A", "primary_decoder_baseline": "D0=original S",
+  "primary_end_to_end": "T3-D2 versus T0-D0",
+  "prior": {"status":"requires_independent_source_and_scale","enabled":false,"user_30mm_is_unverified":true},
+  "default_changed": false, "formal_error": null, "subagents": false
+}

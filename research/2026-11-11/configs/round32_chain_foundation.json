@@ -1,0 +1,46 @@
+{
+  "version": "round32_chain_foundation_v1",
+  "purpose": "Baseline consolidation and information-loss diagnosis; no algorithm promotion",
+  "parent_commit": "0480dae78215721ddfbbbacae8404422341237c1",
+  "parent_version_record": "runs/round31_fascicle_guided_pair_v1/version_record/version_record.json",
+  "parent_version_sha256": "1b96d469ec8cd60b9248e20101efe4e4f048fe0c673ba963237fff7ce728f708",
+  "seeds": [20261023, 20261024],
+  "primary_profile": "Round31 R: T1_union + fixed C1 + Round29 B curves + UW",
+  "secondary_profile": "Round31 S: same pool and geometry, fascicle-guided pair ranking",
+  "datasets": {"apo153": 153, "dev282": 282, "external34": 34},
+  "boundary_reference_n": 143,
+  "boundary_unclear_n": 10,
+  "dev_groups": 279,
+  "phase_0": "Verify and summarize existing artifacts; no new forward passes",
+  "phase_1": "Frozen T1 checkpoints, save float32 union/sup/deep probability outputs; reproduce native protocol and report binary-mask parity before diagnosis",
+  "phase_2": {
+    "scope": "Separate analytic coordinate tests, frozen-mask decoder tests, and image-level network tests",
+    "transforms": ["identity", "uniform_scale_0.75", "uniform_scale_1.25", "black_padding_10percent_each_side"],
+    "preserve": "All anatomical content; explicit forward/inverse coordinates; reference pixels transformed only in evaluator",
+    "inference": "Keep original 512 boundary and 1024 fasc inference protocol; never train or calibrate",
+    "note": "Image-level transforms can change sampling/resolution; do not label all differences decoder errors. No inferred ROI crop is introduced."
+  },
+  "phase_3": "Choose one supported next intervention, without implementing training or a new production rule",
+  "evaluation": {
+    "external": "Assumed-units exploratory only; existing reused development set",
+    "formal_error": null,
+    "missing": "Preserve null, fixed denominator and IDs",
+    "paired": "Actual common IDs per parameter, new/lost separately; never pool seeds as independent images",
+    "metrics": ["coverage_image_and_group_equal", "paired_MAE", "bias", "median_abs", "p90_abs", "max_abs", "FL_abs_gt20", "FL_abs_gt50", "boundary_reference_correct", "selected_invalid", "failure_stage"],
+    "tail_cutoffs": "20/50 assumed mm are inherited descriptive bins, not medical acceptance limits",
+    "reference_access": "Read cached baseline evaluations in phase 0; new inference consumes image-only manifests; diagnosis uses references only after prediction freeze",
+    "diagnostic_acceptance": "Complete attribution with explicit unresolved cases, not mandatory improvement in this no-change round"
+  },
+  "constraints": {
+    "subagents": false,
+    "training": false,
+    "default_changed": false,
+    "checkpoint_changed": false,
+    "threshold_search": false,
+    "new_anatomical_labels": false,
+    "new_dataset_download": false,
+    "holdout_or_test_image_access": false,
+    "external_upload": false,
+    "auto_start_next_training_round": false
+  }
+}

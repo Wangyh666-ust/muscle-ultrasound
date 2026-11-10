@@ -1,0 +1,52 @@
+{
+  "round": 65,
+  "status": "authorized_execution_parameters_not_locked",
+  "plan": "thinking/ROUND65_LOCAL_REPAIR_PLAN_20261109.txt",
+  "training": false,
+  "default_changed": false,
+  "subagents": false,
+  "working_baseline": "Round64 S",
+  "reference_baseline": "Round64 R",
+  "boundary_model": "Round62 C 20261023 epoch06",
+  "boundary_model_seed_count": 1,
+  "C1": "B_20261023 frozen",
+  "modules": {
+    "N": "Separate overlapping input paths from nonempty local gap reconstruction",
+    "T": "Detect and retreat unreliable heads/tails; reconstruct using stable anchors",
+    "P": "Protect reliable output outside the explicit window and calibrate candidate replacement",
+    "E": "Bounded single-sided continuation after unreliable-tail retreat"
+  },
+  "registered_arms": ["R", "S", "N", "N_T", "N_P", "N_T_P", "N_E", "N_T_P_E"],
+  "module_gates_independent": true,
+  "failed_modules_do_not_block_passing_modules": true,
+  "control_sources": {"development": 48, "confirmation": 624},
+  "primary_views": {"originals": 469, "manual_images": 143, "manual_conditions": 8, "unique_views": 1470},
+  "natural_pairs": {"all": 117, "strict": 18},
+  "GT_as_decoder_input": false,
+  "case_specific_rules": false,
+  "recovery_direction": "From stable evidence toward either missing or unreliable side, without left/right preference",
+  "horizontal_reflection_control_required": true,
+  "formal_measurement_adapter_replay_required": true,
+  "imputed_points_are_not_observations": true,
+  "long_unsupported_continuations_separate_from_reliable_measurements": true,
+  "engineering_targets": {
+    "recoverable_control_positive_rate_each_side": 0.95,
+    "reliable_cross_layer_or_no_evidence_false_links": 0,
+    "outside_window_preservation_violations": 0,
+    "protected_coverage_decline_limit": 0.01,
+    "difficult_correct_coverage_gain": 0.05,
+    "overall_coverage_delta_ci_lower_bound": -0.005,
+    "recovered_high_confidence_boundary_position_correct_fraction": 0.90,
+    "formal_primary_metric": "MT_relative_range_p95",
+    "primary_target_ratio": 0.85,
+    "PA_FL_p95_max_ratio": 1.05,
+    "new_severe_jumps_or_reliable_result_losses": 0
+  },
+  "conditional_existing_weight_expansion": {
+    "after_boundary_and_measurement_gates_only": true,
+    "T3_boundary_seeds": [20261023, 20261024],
+    "C1_versions": ["B_20261023", "B_20261024"],
+    "actual_both_network_perturbations": 26,
+    "not_a_second_Round62_seed": true
+  }
+}

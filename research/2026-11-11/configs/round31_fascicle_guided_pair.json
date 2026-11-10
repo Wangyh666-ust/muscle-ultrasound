@@ -1,0 +1,22 @@
+{
+  "version": "round31_fascicle_guided_pair_v1",
+  "seeds": [20261023, 20261024],
+  "boundary_arm": "T1_union",
+  "arms": ["R", "S"],
+  "datasets": {"apo153":153,"dev282":282,"external34":34},
+  "reference_count":143,
+  "fasc_checkpoint_sha256":"373227808a9386c66e301b3b0db136c45db0a602a55a90847464bdb99a67e08f",
+  "regions":"three equal horizontal intervals over min/max observed support of all valid frozen pairs; same intervals for every pair",
+  "evidence":"union of actual foreground pixels of original evaluable C1 components; no PCA rasterization, GT, or extensions",
+  "containment":"per-region inside-and-observed pixels / all evaluable pixels in region; empty denominators excluded and recorded; equal weight over nonempty regions",
+  "observed":"within pair support and nearest paired_x distance <= frozen max_sample_gap",
+  "score":"exact rational containment * ((common_columns - interior_columns) / image_width)",
+  "tie":"if baseline R is among exact top-score ties retain R, otherwise original quality/spacing ordering restricted to tied pairs",
+  "fallback":"no valid pair keeps original failure; no evaluable evidence or all scores zero retains R, explicitly flagged",
+  "measurement":"frozen Round30/Round29 B geometry, UW and 25/50/25; no candidate filtering or geometry changes",
+  "raw_deficit":"both raw 10px reference recalls >=0.8 is a local-support diagnostic, not proof of correct complete tracks",
+  "extreme_FL_assumed_mm":[20,50],
+  "no_training":true,
+  "default_changed":false,
+  "no_parameter_search":true
+}

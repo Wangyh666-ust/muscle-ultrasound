@@ -1,0 +1,3 @@
+{"task":"apo","seed":20261017,"long_side":512,"batch_size":4,"lr":3e-4,
+ "weight_decay":1e-4,"epochs":60,"patience":10,"lr_patience":4,"amp":true,
+ "augment":true,"num_workers":2,"tiny_epochs":80,"eval_every":5}

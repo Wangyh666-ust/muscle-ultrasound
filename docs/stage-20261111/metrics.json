@@ -1,0 +1,283 @@
+{
+  "date": "2026-11-11",
+  "status": "retained_research_baseline_not_a_default_pipeline_change",
+  "profile": "C62C + B41 C1; R74P geometry / R77P layer prior / R76A fascicle selection with original FL weights / R78M MT adapter",
+  "not_promoted": [
+    "R79 new weighting",
+    "R80 C/R/G proposals",
+    "768 input or tight crop diagnostics"
+  ],
+  "models": {
+    "runs/round62_augmentation_quality_v1/training/20261023/C/epoch_06_model.pt": "e50a5c7889b371e074b62e13a528e874681fa6957a028e96fe9dec8a3dbba44a",
+    "runs/round41_attribution_consistency_v1/training/20261023/B/final_model.pt": "374fa66fbd47b0bac301ec84d2b63813b7db9aa35111da181797cca506e25327",
+    "runs/round41_attribution_consistency_v1/training/20261024/B/final_model.pt": "997ed753b23d1ba7cee2f02e4473ac2bbe73baec3721c7b55da2f56dc143eb47"
+  },
+  "inputs": {
+    "boundary_longside": 512,
+    "C1_longside": 1024,
+    "boundary_guide_channel": 0,
+    "ensemble": "five native translations"
+  },
+  "C1_role": "downstream boundary pair selection and measurement, not a nonzero input to current boundary model",
+  "parameter_sources": [
+    "runs/round63_boundary_paths_v1/config.json",
+    "runs/round68_boundary_paths_v1/parameter_lock.json",
+    "runs/round69_measurement_support_v1/parameter_lock.json",
+    "runs/round74_permission_scoring_v1/parameter_lock.json",
+    "runs/round77_subject_layer_v1/protocol.json"
+  ],
+  "metrics": {
+    "external34": {
+      "20261023": {
+        "MT": {
+          "total": 34,
+          "available": 34,
+          "missing": 0,
+          "mae": 1.5317401000331496,
+          "median": 1.213952081766294,
+          "p90": 1.937924522931152,
+          "bias": 0.9873875673534113,
+          "max_error": 9.25399305555555,
+          "over50pct": 0
+        },
+        "PA": {
+          "total": 34,
+          "available": 34,
+          "missing": 0,
+          "mae": 1.116495238554053,
+          "median": 0.5699711731264667,
+          "p90": 2.6985921890864373,
+          "bias": -0.3795450254737616,
+          "max_error": 4.9590210902127865,
+          "over50pct": 0
+        },
+        "FL": {
+          "total": 34,
+          "available": 34,
+          "missing": 0,
+          "mae": 5.866988605653198,
+          "median": 5.543299501002366,
+          "p90": 10.841418852527594,
+          "bias": 5.807577057878216,
+          "max_error": 12.170095855583355,
+          "over50pct": 0
+        }
+      },
+      "20261024": {
+        "MT": {
+          "total": 34,
+          "available": 34,
+          "missing": 0,
+          "mae": 1.5317401000331496,
+          "median": 1.213952081766294,
+          "p90": 1.937924522931152,
+          "bias": 0.9873875673534113,
+          "max_error": 9.25399305555555,
+          "over50pct": 0
+        },
+        "PA": {
+          "total": 34,
+          "available": 34,
+          "missing": 0,
+          "mae": 1.1193753436805807,
+          "median": 0.572769912530342,
+          "p90": 2.93792310336663,
+          "bias": -0.42051845316151165,
+          "max_error": 4.629148704149507,
+          "over50pct": 0
+        },
+        "FL": {
+          "total": 34,
+          "available": 34,
+          "missing": 0,
+          "mae": 5.841940162629784,
+          "median": 5.440485324643557,
+          "p90": 9.962647128137567,
+          "bias": 5.803691286727411,
+          "max_error": 11.939799773299697,
+          "over50pct": 0
+        }
+      }
+    },
+    "young78": {
+      "20261023": {
+        "MT": {
+          "total": 78,
+          "available": 78,
+          "missing": 0,
+          "mae": 1.1559754809260336,
+          "median": 0.8088343321269083,
+          "p90": 1.7281451749410257,
+          "bias": 1.1169148473145587,
+          "max_error": 13.631824908492419,
+          "over50pct": 1
+        },
+        "PA": {
+          "total": 78,
+          "available": 77,
+          "missing": 1,
+          "mae": 2.3267994660622713,
+          "median": 1.794742708477493,
+          "p90": 4.531924443343801,
+          "bias": -0.4527284017543884,
+          "max_error": 10.410604978353026,
+          "over50pct": 2
+        },
+        "FL": {
+          "total": 78,
+          "available": 77,
+          "missing": 1,
+          "mae": 7.093838233342759,
+          "median": 3.776978712841725,
+          "p90": 14.406147965006646,
+          "bias": 2.066301122356935,
+          "max_error": 102.25654167992978,
+          "over50pct": 1
+        }
+      },
+      "20261024": {
+        "MT": {
+          "total": 78,
+          "available": 78,
+          "missing": 0,
+          "mae": 1.1559754809260336,
+          "median": 0.8088343321269083,
+          "p90": 1.7281451749410257,
+          "bias": 1.1169148473145587,
+          "max_error": 13.631824908492419,
+          "over50pct": 1
+        },
+        "PA": {
+          "total": 78,
+          "available": 77,
+          "missing": 1,
+          "mae": 2.291284909716507,
+          "median": 1.798141415779293,
+          "p90": 4.424952242140171,
+          "bias": -0.5252989451350583,
+          "max_error": 9.9655673065667,
+          "over50pct": 2
+        },
+        "FL": {
+          "total": 78,
+          "available": 77,
+          "missing": 1,
+          "mae": 6.855489844400368,
+          "median": 3.5037019239715548,
+          "p90": 13.118883335982106,
+          "bias": 2.4305439845509595,
+          "max_error": 101.01012360549375,
+          "over50pct": 1
+        }
+      }
+    },
+    "combined112": {
+      "20261023": {
+        "MT": {
+          "total": 112,
+          "available": 112,
+          "missing": 0,
+          "mae": 1.2700468831549796,
+          "median": 0.9402011410370896,
+          "p90": 1.9527695012334731,
+          "bias": 1.0775940658977818,
+          "max_error": 13.631824908492419,
+          "over50pct": 1
+        },
+        "PA": {
+          "total": 112,
+          "available": 111,
+          "missing": 1,
+          "mae": 1.956075648627321,
+          "median": 1.416095288106451,
+          "p90": 4.3615655654592445,
+          "bias": -0.43031187208284516,
+          "max_error": 10.410604978353026,
+          "over50pct": 2
+        },
+        "FL": {
+          "total": 112,
+          "available": 111,
+          "missing": 1,
+          "mae": 6.718046455491903,
+          "median": 4.70946345420856,
+          "p90": 11.593649086828279,
+          "bias": 3.212277535039128,
+          "max_error": 102.25654167992978,
+          "over50pct": 1
+        }
+      },
+      "20261024": {
+        "MT": {
+          "total": 112,
+          "available": 112,
+          "missing": 0,
+          "mae": 1.2700468831549796,
+          "median": 0.9402011410370896,
+          "p90": 1.9527695012334731,
+          "bias": 1.0775940658977818,
+          "max_error": 13.631824908492419,
+          "over50pct": 1
+        },
+        "PA": {
+          "total": 112,
+          "available": 111,
+          "missing": 1,
+          "mae": 1.9323216192190165,
+          "median": 1.3767821075233329,
+          "p90": 4.0272184659005,
+          "bias": -0.49320401966568367,
+          "max_error": 9.9655673065667,
+          "over50pct": 2
+        },
+        "FL": {
+          "total": 112,
+          "available": 111,
+          "missing": 1,
+          "mae": 6.545033185119286,
+          "median": 4.153131561819194,
+          "p90": 11.492021916408731,
+          "bias": 3.4637602753077106,
+          "max_error": 101.01012360549375,
+          "over50pct": 1
+        }
+      }
+    }
+  },
+  "measurement_reference_images": 112,
+  "source_boundary_reference_images": 221,
+  "evaluation_caveats": [
+    "Historical repeated development/regression, not blind clinical validation",
+    "34 scalar reference units remain assumed mm",
+    "78 source-derived geometry includes explicit assisted completion and curved FL references",
+    "Two C1 seeds share one boundary checkpoint; not two boundary replications"
+  ],
+  "kaggle": {
+    "submission_ref": 58202815,
+    "status": "COMPLETE",
+    "public_score": 0.5011,
+    "previous_public_score": 0.66936,
+    "score_reduction": 0.16825999999999997,
+    "pure_current_model_score": false,
+    "composition": {
+      "current_complete_rows": 304,
+      "prior_same_image_measured_ids": [
+        "IMG_00004.tif",
+        "IMG_00041.tif",
+        "IMG_00270.png",
+        "IMG_00306.png"
+      ],
+      "prior_approved_median_ids": [
+        "IMG_00187.tif"
+      ],
+      "fallback_cells": 15
+    }
+  },
+  "next_phase": [
+    "Difficulty structure and target muscle-layer identity audit",
+    "Training/inference input alignment and supervised role consistency, separate controls",
+    "Preserve independent existing-evidence connection and FL geometric-fidelity tasks"
+  ],
+  "no_new_training": true,
+  "no_default_change": true
+}

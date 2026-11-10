@@ -1,0 +1,79 @@
+{
+  "round": 69,
+  "date": "2026-11-09",
+  "status": "plan_only_not_executed",
+  "plan": "thinking/ROUND69_MEASUREMENT_SUPPORT_PLAN_20261109.txt",
+  "training": false,
+  "default_changed": false,
+  "subagents": false,
+  "baseline": "Round68.S",
+  "frozen_W": "Round68.W",
+  "boundary_seed": "C_20261023_epoch06",
+  "C1": "B_20261023_frozen",
+  "source_type_separate_from_eligibility": true,
+  "eligibility_fields": ["fit_eligible", "support_eligible", "anchor_eligible"],
+  "source_types": ["raw_prediction", "W_probability_relocalization", "J_reconstruction", "X_extension"],
+  "geometry_version_and_candidate_lineage_required": true,
+  "never_relabel_generated_points_as_raw": true,
+  "stage1": {
+    "arms": ["S", "W0", "WM", "PWM"],
+    "definitions": {
+      "S": "original S geometry and legacy measurement adapter",
+      "W0": "frozen Round68 W geometry and legacy measurement adapter",
+      "WM": "identical W geometry and qualified W-point measurement adapter",
+      "PWM": "normal-protected W geometry and identical new adapter"
+    },
+    "primary_comparison": ["WM", "W0"],
+    "secondary_comparison": ["PWM", "WM"],
+    "controlled_adapter_diagnostics": ["fit_only_eligibility", "fit_and_local_support_eligibility"],
+    "W0_WM_geometry_must_match_exactly": true,
+    "J_and_X_generated_points_eligible": false,
+    "four_piece_estimator_changed": false,
+    "first_audit_loss_cohort": {"total": 98, "support_gap": 94, "fit_failure": 4},
+    "recovery_does_not_by_itself_imply_accuracy": true
+  },
+  "stage2": {
+    "only_expand_after_stage1_qualification": true,
+    "fixed_input": "locked PWM output",
+    "arms": ["J00", "J10", "J01", "J11"],
+    "factors": ["candidate_and_anchor_version_consistency", "stable_region_and_edit_window_protection"],
+    "raw_candidates_preserved_as_alternatives": true,
+    "source_version_conflicts_must_be_explicit": true,
+    "W_is_not_automatically_trusted": true,
+    "X_not_retuned_or_added_to_formal_support": true
+  },
+  "calibration": {
+    "development_sources": 48,
+    "normal_inputs": 192,
+    "historical_confirmation_sources": 624,
+    "confirmation_only_for_passed_candidates": true,
+    "new_blind_test": false,
+    "validation_boundary_GT_used_for_rule_selection": false,
+    "named_normal_protection_sources": ["image_1001.tif", "image_1004.tif"],
+    "known_post_lock_regressions_not_for_tuning": ["image_0960.tif", "image_0405.tif", "image_1011.tif", "image_0396.tif", "image_0854.tif"]
+  },
+  "full_scope": {
+    "development_originals": 435,
+    "external_originals": 34,
+    "all_originals": 469,
+    "manual_boundary_originals": 143,
+    "additional_perturbations_per_manual_source": 7,
+    "views": 1470,
+    "natural_pairs": 117,
+    "strict_natural_pairs": 18,
+    "boundary_seeds": 1,
+    "infer_missing_cache_only": true
+  },
+  "planned_upgrade_goals_not_results": {
+    "baseline_good_sides": 176,
+    "both_sides_good_originals": 50,
+    "maximum_good_side_coverage_decline_percentage_points": 1.0,
+    "originally_complete_development_outputs": 408,
+    "new_loss_reported_separately_from_recovery": true,
+    "no_new_severe_jumps": true,
+    "recovered_measurement_error_must_be_checked": true,
+    "whole_pipeline_and_fixed_contributor_diagnostics_separate": true
+  },
+  "fixed_methods": ["model_weights", "C1_prediction", "input_crop_and_scale", "probability_fusion", "target_layer", "candidate_extraction", "MT_position_rule", "spatial_weight_rule", "four_piece_fit", "FL_intersection_and_ray_rule"],
+  "deliverables": ["qualified_support_audit", "display_and_measurement_curve_comparison", "paired_missingness_and_recovery_error", "normal_and_full_stability_results", "improved_and_degraded_gallery", "updated_checklist"]
+}

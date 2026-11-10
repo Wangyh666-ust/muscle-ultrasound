@@ -1,0 +1,13 @@
+{
+  "status": "publication_before_dependency_checked_cleanup",
+  "date": "2026-11-11",
+  "preserve": [
+    "source",
+    "locked parameters",
+    "phase conclusions",
+    "current models",
+    "training sources",
+    "active probability dependencies"
+  ],
+  "local_archive_not_public": true
+}

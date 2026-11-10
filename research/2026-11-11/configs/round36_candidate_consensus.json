@@ -1,0 +1,15 @@
+{
+  "version": "round36_candidate_consensus_v1",
+  "seeds": [20261023, 20261024],
+  "boundary_model": "frozen Round35 T3",
+  "fascicle_model": "frozen Round26.1 C1",
+  "datasets": {"external34": 34, "apo153": 153, "dev282": 282},
+  "arms": ["D0", "D1", "M", "C", "P", "F", "CP", "CF", "CPF"],
+  "contrasts": [["D1","M"],["D0","M"],["M","C"],["M","P"],["M","F"],["C","CP"],["C","CF"],["CP","CPF"],["D1","CPF"]],
+  "merge": {"dedup_max_error_height_fraction": 0.002, "dedup_support_iou": 0.95, "scope": "union of existing valid D0/D1 pair candidates, no synthetic cross-layer pairs"},
+  "c1": {"angular_inlier_deg": 15, "duplicate_angle_deg": 5, "duplicate_offset_height_fraction": 0.006, "length_weight_cap_width_fraction": 0.15, "component_inside_fraction": 0.8, "min_independent_tracks_for_gate": 3, "min_active_regions_for_gate": 2, "min_containment": 0.6, "weights": {"containment": 0.55, "support": 0.2, "boundary_probability": 0.15, "identity_probability": 0.1}, "region_weights": [0.25,0.5,0.25]},
+  "mt_prior": {"status": "user_hypothesis_sensitivity_only_not_validated_anatomical_prior", "source": "User-proposed 15-25 mm range; no evaluation labels fitted", "flat_interval_mm": [15,25], "soft_shoulder_mm": 5, "max_score_penalty": 0.1, "requires_scale": true, "missing_scale": "exactly no effect", "clipping": false},
+  "direction": {"min_independent_inliers": 3, "inlier_deg": 15, "max_anchor_change_deg": 15, "preserve_FL_and_PA_anchor_ids": true, "region_weights": [0.25,0.5,0.25], "method": "length-capped axial weighted median within each third; duplicate trajectories one vote; invalid anchors unchanged"},
+  "metric": {"tolerances": {"PA": 6,"FL": 12,"MT": 3}, "external_units": "unconfirmed_exploratory_assumed_mm_degrees", "missing_experimental_measurement": "same image frozen D1 fallback, count separately", "reference_mean_primary_median_sensitivity": true},
+  "training": false, "new_inference": false, "default_changed": false, "subagents": false, "kaggle_upload": false
+}

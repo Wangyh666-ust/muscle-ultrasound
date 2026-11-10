@@ -1,0 +1,25 @@
+{
+  "training_label_variants": 673,
+  "source_rebuilds_exact": 673,
+  "training_images": 672,
+  "training_Dice": {
+    "upper": 0.9228149705643715,
+    "lower": 0.909506214341173
+  },
+  "diagnostic_weak_images": 12,
+  "matched_controls": 12,
+  "mild_images": 78,
+  "mild_conditions": 390,
+  "TTA_missing_counts": {
+    "missing": 2572,
+    "all5_fail": 2119,
+    "some_view_succeeds": 453,
+    "identity_hit_lost": 74
+  },
+  "controls_regressed_over2pp": {
+    "F768_single": 7,
+    "M512_single": 0,
+    "C512_single": 5
+  },
+  "limitation": "Aggregate diagnostic data only; no external78 images, patient records, expert strokes or probability maps are redistributed. 768 is a50% input-grid intervention, not a mild perturbation."
+}

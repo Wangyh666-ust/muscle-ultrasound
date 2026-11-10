@@ -1,0 +1,633 @@
+{
+  "runs/round63_boundary_paths_v1/config.json": {
+    "low": 0.18,
+    "high": 0.5,
+    "union_floor": 0.4,
+    "minimum_track": 0.02,
+    "minimum_anchor": 0.006,
+    "point_step": 0.007,
+    "max_column_gap": 2,
+    "endpoint_window": 0.05,
+    "near_distance": 0.04,
+    "max_gap": 0.2,
+    "max_curvature": 12.0,
+    "max_turn_deg": 55.0,
+    "maximum_bulge": 0.025,
+    "corridor_probability": 0.1,
+    "corridor_hit_fraction": 0.25,
+    "image_hit_fraction": 0.6,
+    "max_paths": 10,
+    "max_chain": 4,
+    "min_pair_span": 0.12,
+    "min_thickness": 0.015,
+    "extension": 0.08,
+    "extension_blind_run": 0.015,
+    "ambiguity_margin": 0.025,
+    "prior_flat_mm": [
+      15.0,
+      25.0
+    ],
+    "prior_shoulder_mm": 5.0,
+    "prior_maximum_penalty": 0.1
+  },
+  "runs/round68_boundary_paths_v1/parameter_lock.json": {
+    "selected": {
+      "W": {
+        "config": {
+          "min_width_sigma": 6.0
+        },
+        "stats": {
+          "0": {
+            "inputs": 576,
+            "normal_failed": 0,
+            "eligible_positive_sources": 48,
+            "positive_pass": 47,
+            "positive_rate": 0.9791666666666666,
+            "all_positive_views": 96,
+            "ineligible_positive_views": 0,
+            "negative_views": 480,
+            "negative_fail": 38,
+            "mirror_inconsistent": 0,
+            "reasons": {
+              "accepted": 134,
+              "normal_or_no_persistent_ambiguous_offset": 442
+            }
+          },
+          "1": {
+            "inputs": 576,
+            "normal_failed": 0,
+            "eligible_positive_sources": 48,
+            "positive_pass": 47,
+            "positive_rate": 0.9791666666666666,
+            "all_positive_views": 96,
+            "ineligible_positive_views": 0,
+            "negative_views": 480,
+            "negative_fail": 50,
+            "mirror_inconsistent": 0,
+            "reasons": {
+              "accepted": 146,
+              "normal_or_no_persistent_ambiguous_offset": 430
+            }
+          }
+        },
+        "passed": false,
+        "qualified": false,
+        "confirmation": null,
+        "normal_protection": false
+      },
+      "J": {
+        "config": {
+          "max_retreat": 0.2,
+          "improvement": 0.25
+        },
+        "stats": {
+          "0": {
+            "inputs": 384,
+            "normal_failed": 0,
+            "eligible_positive_sources": 48,
+            "positive_pass": 40,
+            "positive_rate": 0.8333333333333334,
+            "all_positive_views": 96,
+            "ineligible_positive_views": 0,
+            "negative_views": 288,
+            "negative_fail": 0,
+            "mirror_inconsistent": 0,
+            "reasons": {
+              "accepted": 90,
+              "no_qualified_two_fragment_repair": 294
+            }
+          },
+          "1": {
+            "inputs": 384,
+            "normal_failed": 0,
+            "eligible_positive_sources": 46,
+            "positive_pass": 41,
+            "positive_rate": 0.8913043478260869,
+            "all_positive_views": 96,
+            "ineligible_positive_views": 4,
+            "negative_views": 288,
+            "negative_fail": 0,
+            "mirror_inconsistent": 0,
+            "reasons": {
+              "accepted": 94,
+              "no_qualified_two_fragment_repair": 290
+            }
+          }
+        },
+        "passed": false,
+        "qualified": false,
+        "confirmation": null,
+        "normal_protection": true
+      },
+      "X": {
+        "config": {
+          "support_fraction": 0.85
+        },
+        "stats": {
+          "0": {
+            "inputs": 384,
+            "normal_failed": 0,
+            "eligible_positive_sources": 48,
+            "positive_pass": 35,
+            "positive_rate": 0.7291666666666666,
+            "all_positive_views": 96,
+            "ineligible_positive_views": 0,
+            "negative_views": 288,
+            "negative_fail": 0,
+            "mirror_inconsistent": 0,
+            "reasons": {
+              "no_probability_supported_extension": 216,
+              "accepted": 168
+            }
+          },
+          "1": {
+            "inputs": 384,
+            "normal_failed": 0,
+            "eligible_positive_sources": 46,
+            "positive_pass": 21,
+            "positive_rate": 0.45652173913043476,
+            "all_positive_views": 96,
+            "ineligible_positive_views": 4,
+            "negative_views": 288,
+            "negative_fail": 0,
+            "mirror_inconsistent": 0,
+            "reasons": {
+              "accepted": 102,
+              "no_probability_supported_extension": 282
+            }
+          }
+        },
+        "passed": false,
+        "qualified": false,
+        "confirmation": null,
+        "normal_protection": true
+      }
+    },
+    "protected": {
+      "thinking/ROUND68_BOUNDARY_PATH_PLAN_20261109.txt": "cea673af61dc3189c8190ad2912b9e0bcb6ad953e56f454a84490e1092132ba2",
+      "configs/round68_boundary_path_plan.json": "7393c6891ff284c7aaee38084280f4e8dee8762f3af863d7a11214570dc2f571",
+      "runs/round62_augmentation_quality_v1/training/20261023/C/epoch_06_model.pt": "e50a5c7889b371e074b62e13a528e874681fa6957a028e96fe9dec8a3dbba44a",
+      "runs/round63_boundary_paths_v1/inputs.json": "4984381463c709fe816efbe690178cd2da2f6cbec381dcb1410540e0c75e8ce0",
+      "runs/round63_boundary_paths_v1/metadata.json": "47d8bb174d19f2c223ca1a5ee68d97b9b7a9d64ca1977f07b8b22ddc939672dc",
+      "runs/round63_boundary_paths_v1/config.json": "b5223626054a35940718f4d32e556987cb6eae6994309ec3df918417ea8d5508",
+      "runs/round67_local_evidence_v1/parameter_lock.json": "85a98e82bae2c91bf80512a903c4bd09167639d8094f9fdc84f954ea8b2f3d39",
+      "runs/round67_local_evidence_v1/summary.json": "15064c127659f6a132e1966e60f2af67ab15ae7f3685714238ec6b4e7cd58ce8",
+      "runs/round67_local_evidence_v1/execution_state.json": "5c54efdc35d127c1c821fb69bc8a1d59a49c87417b5260abde572cec62028e5f",
+      "runs/round64_boundary_continuation_v1/controls/S_confirmation_lock.json": "da2999a65f28bd9d15a0e01841a5fa7151a170a4411b308ccf941df2f00a047e",
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/umud_baseline/apo_baseline.py": "d791c0931fae02034b55bd7bbbf241a79c33e1fb6bb097676c2d859dd0dfbf5d",
+      "src/umud_baseline/audit.py": "579c7b8012e58d11aa500df71abb855cc627c7e67e8cd907c87438a4bd0d31aa",
+      "src/umud_baseline/boundary_identity.py": "262840f003d49455d74dc98b7ad2135995102e394425d51051edc68763f633e6",
+      "src/umud_baseline/data.py": "0e60a305f7ae411b68dbef0912dce5300447f5ac3159bb7076c60ce5bdbcf9c3",
+      "src/umud_baseline/direction_data.py": "27fa7933e782c0075d097a25936e7ac5aeeeb736169851eac20c154efb3fa472",
+      "src/umud_baseline/direction_model.py": "9de15770c140d0b07b540c2b469b06f8047a6baafdf6eb6a775091f77a011a4d",
+      "src/umud_baseline/evaluate.py": "c8e4cb748217c76a8e90b4084a9b9b09bca3e053dbcb980e4234288a88726a0f",
+      "src/umud_baseline/fallmud_guard.py": "507d1d620f3e9ec73cddbb0fcd0fe05e442faa3c4d783755a34061c0a67ef222",
+      "src/umud_baseline/geometry.py": "5299218c11afd8c5fdd214f7ccb5d56a5b24978d9214bb45e58e279ca0da3f81",
+      "src/umud_baseline/label_audit.py": "38f8f90a8119f6c72645fc76f4bc3d068aad5097536e6d35bfc482453fb1d2d2",
+      "src/umud_baseline/predict.py": "3bf7b8638d7512d9246aa511015f1a1f2833af2e344d6c943e2935769037bf1d",
+      "src/umud_baseline/train.py": "3dfab37963479b6a3da519603de0653e805bea5d15866238ec0928f0c59abb2d",
+      "src/umud_baseline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scripts/round68_geometry.py": "c48ef4796e95b52a634737aaba8749497a54066d6e0ec5f81dbd5499841d9cd9",
+      "scripts/round68_controls.py": "0baa5f7d632d9de289c0393076197fd6b063951fd00959e9a381e301588ae24b",
+      "scripts/round68_work.py": "d84debe82371a7caaaff24f3af49585171cab9f4cfa46803ffd429b320449a4f",
+      "scripts/round68_evaluate.py": "85d17ae9f6945867296d6ad6ff7dccb0d8e92c47b0a1f49e04f1f16c987f23c3",
+      "scripts/round63_paths.py": "08dfd647abb2cd38ac5cc784cbdfe2a398bd15f4819f53828a9d6af7b156067b",
+      "scripts/round64_seams.py": "5de1849f76f3e2c497dd10cf5c0b065cbee11d37e6a91dc1398ec092976a8804",
+      "scripts/round65_core.py": "9ad60b87332bd46783604b9757045df21e8a76b368a33cfe23654f48556c5cfd",
+      "scripts/round65_measure.py": "74ca83589739ebf8d15ddbe1a7d36fb6d0def6b6dd4cb47a86d84ed5a7795400",
+      "scripts/round64_measure_adapter.py": "297a32b8d43973d43e62c3e6c1f33e96c6d3c087ed9b9cb1972ee2d1dab2cd04",
+      "scripts/round66_geometry.py": "41a4a8be58361a46f20e925c06a3308f292fe4a6efcd213ec80d2d441cb900f5",
+      "scripts/round67_geometry.py": "9874405edd24bd150b68961146199fce9ee2f90ba3bb6603d4654c8abfe67c53",
+      "runs/round68_boundary_paths_v1/protocol.json": "3c98d85b94124ff784f058af6b6229c4f2797728c7ed8964e6a29358a74e58b1",
+      "runs/round68_boundary_paths_v1/normal_controls.json": "6604466f558b78bda4b2f8842b4132a9d8ccef7f0d939f75aecd8d8a6ff22f81",
+      "runs/round68_boundary_paths_v1/development_controls.json": "85ad0179ccd121f9ec73afdbe77a4f7fe6901c0800870e9ecb7d190bdcc0c0b7",
+      "runs/round68_boundary_paths_v1/development_controls_scoped.json": "7f010034eab5f36f10d9c7a55df146cda17d4bcf261bcb928e426a896cc62fdd",
+      "scripts/round68_control_scope_audit.py": "d4fee2662a86da88c8174497c7bf7b55e0b13ac22624a2de91905ea11701f958",
+      "runs/round68_boundary_paths_v1/confirmation_controls.json": "5631813bd26bf1e31dcc32306ed57ecaafc12423846c4084da0bb3b49a42a84b",
+      "runs/round68_boundary_paths_v1/measurement_golden.json": "be9511ea5e54bc94140fddc3690a0f10dccb8db592d5bd99fbf7804240d13420"
+    },
+    "controlled_rules_locked": true,
+    "known_cases_not_used_for_tuning": true,
+    "failed_modules_are_shadow_only": true,
+    "arms": [
+      "S",
+      "W",
+      "J",
+      "X",
+      "WJ",
+      "WX",
+      "JX",
+      "WJX"
+    ],
+    "history_comparator": "RX67",
+    "default_changed": false,
+    "training": false,
+    "subagents": false,
+    "source_seeds": 1,
+    "shape_config_sha": "306859f4dd5e952b59387c2947960ef1412c6c6ed2b97affb9ee885d2be682c9"
+  },
+  "runs/round69_measurement_support_v1/parameter_lock.json": {
+    "selected": {
+      "gray_min": 0.6,
+      "gray_ridge_fraction": 0.8,
+      "gray_gain": 0.08,
+      "roughness_gain_sigma": 0.5,
+      "q_min": 0.5,
+      "center_tolerance_sigma": 2.0,
+      "local_residual_sigma": 2.0
+    },
+    "qualified": false,
+    "shadow_only": true,
+    "stage2_expanded": false,
+    "stage2_reason": "Stage1 normal and pressure-control gate failed; no J enlargement",
+    "protected": {
+      "runs/round62_augmentation_quality_v1/training/20261023/C/epoch_06_model.pt": "e50a5c7889b371e074b62e13a528e874681fa6957a028e96fe9dec8a3dbba44a",
+      "runs/round63_boundary_paths_v1/inputs.json": "4984381463c709fe816efbe690178cd2da2f6cbec381dcb1410540e0c75e8ce0",
+      "runs/round63_boundary_paths_v1/metadata.json": "47d8bb174d19f2c223ca1a5ee68d97b9b7a9d64ca1977f07b8b22ddc939672dc",
+      "runs/round63_boundary_paths_v1/config.json": "b5223626054a35940718f4d32e556987cb6eae6994309ec3df918417ea8d5508",
+      "runs/round68_boundary_paths_v1/parameter_lock.json": "010816344933acfa1b1905243d4937278235618a035a38183b9ac29e3c049159",
+      "runs/round68_boundary_paths_v1/summary.json": "424d54dac1c12ecf8eaafac3e2cc70b191297d21bdcecb4e8527e3aa069b208c",
+      "configs/round69_measurement_support_plan.json": "b1769894e4ae1012e657c81b4baaf72fc160347553f5a8ab0d72032e59e55555",
+      "thinking/ROUND69_MEASUREMENT_SUPPORT_PLAN_20261109.txt": "c01a3995636e131c1ef4417fd4d1bbc49dfe29cdc08fe738bcda4c5e44219c2b",
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/umud_baseline/apo_baseline.py": "d791c0931fae02034b55bd7bbbf241a79c33e1fb6bb097676c2d859dd0dfbf5d",
+      "src/umud_baseline/audit.py": "579c7b8012e58d11aa500df71abb855cc627c7e67e8cd907c87438a4bd0d31aa",
+      "src/umud_baseline/boundary_identity.py": "262840f003d49455d74dc98b7ad2135995102e394425d51051edc68763f633e6",
+      "src/umud_baseline/data.py": "0e60a305f7ae411b68dbef0912dce5300447f5ac3159bb7076c60ce5bdbcf9c3",
+      "src/umud_baseline/direction_data.py": "27fa7933e782c0075d097a25936e7ac5aeeeb736169851eac20c154efb3fa472",
+      "src/umud_baseline/direction_model.py": "9de15770c140d0b07b540c2b469b06f8047a6baafdf6eb6a775091f77a011a4d",
+      "src/umud_baseline/evaluate.py": "c8e4cb748217c76a8e90b4084a9b9b09bca3e053dbcb980e4234288a88726a0f",
+      "src/umud_baseline/fallmud_guard.py": "507d1d620f3e9ec73cddbb0fcd0fe05e442faa3c4d783755a34061c0a67ef222",
+      "src/umud_baseline/geometry.py": "5299218c11afd8c5fdd214f7ccb5d56a5b24978d9214bb45e58e279ca0da3f81",
+      "src/umud_baseline/label_audit.py": "38f8f90a8119f6c72645fc76f4bc3d068aad5097536e6d35bfc482453fb1d2d2",
+      "src/umud_baseline/predict.py": "3bf7b8638d7512d9246aa511015f1a1f2833af2e344d6c943e2935769037bf1d",
+      "src/umud_baseline/train.py": "3dfab37963479b6a3da519603de0653e805bea5d15866238ec0928f0c59abb2d",
+      "src/umud_baseline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scripts/round69_common.py": "8be1c9cca34b0eea6acc49d6810da08261a72e0a2ef81b9cbe6cf9a81c31d320",
+      "scripts/round69_core.py": "3912486b0f28a9cb4d57cb929f4835dbd3cb66cfa91aed497ebccb075e9829e0",
+      "scripts/round69_controls.py": "5eaa5c7c405e2d3ce68dee70ba7c6d652875b70dd16b767888ce5d77b38bd151",
+      "scripts/round69_work.py": "7cccacb76158fc33f4544292994351003ca56445ecc6321bf60aa70065ee1971",
+      "scripts/round64_measure_adapter.py": "297a32b8d43973d43e62c3e6c1f33e96c6d3c087ed9b9cb1972ee2d1dab2cd04",
+      "scripts/round56_boundary.py": "68886d5909c592c18b6af907d7b53beada36d0a35cb78e17b400e8e3c72d9102",
+      "scripts/round65_measure.py": "74ca83589739ebf8d15ddbe1a7d36fb6d0def6b6dd4cb47a86d84ed5a7795400",
+      "scripts/round63_measure.py": "8011602847902be2f01c8968912fa4707bb92f0df45343aed8188e480f5eb27a",
+      "scripts/round48_length_replay.py": "273ef7c7f09bacddde85df0102d7652a97fe7cf5b80178de4059973cb8027534",
+      "scripts/round68_geometry.py": "c48ef4796e95b52a634737aaba8749497a54066d6e0ec5f81dbd5499841d9cd9",
+      "runs/round69_measurement_support_v1/protocol.json": "69f0168deb17cd620b0b751d11e2cd3f2e4b11afa1230d2a07fbf098d4d384f5",
+      "runs/round69_measurement_support_v1/calibration.json": "d1641b21051c33e290636528683262146ee4bcb8b5f9813c986ec22e371408d3",
+      "runs/round69_measurement_support_v1/confirmation.json": "f558d6cbc78b4cd2a691b29b7b03e609ac3462f5316e83bfcb6cc3d93b465298"
+    },
+    "GT_not_used_for_full_rule_selection": true,
+    "training": false,
+    "default_changed": false,
+    "subagents": false
+  },
+  "runs/round70_WJ_fidelity_v1/parameter_lock.json": {
+    "selected": {
+      "jump_sigma": 4.0,
+      "bound_sigma": 1.5
+    },
+    "qualified": false,
+    "shadow_only": true,
+    "controlled_modules": {
+      "W": true,
+      "F": false,
+      "J00": false,
+      "J10": false,
+      "J01": false,
+      "WJ": false
+    },
+    "J_sync_full_shadow": true,
+    "protected": {
+      "runs/round62_augmentation_quality_v1/training/20261023/C/epoch_06_model.pt": "e50a5c7889b371e074b62e13a528e874681fa6957a028e96fe9dec8a3dbba44a",
+      "thinking/ROUND70_WJ_FIDELITY_PLAN_20261109.txt": "a41715427defe0a3ef401d00d33f2f1870a4bfe533bbeb03fbc8432de4aa1edf",
+      "runs/round63_boundary_paths_v1/inputs.json": "4984381463c709fe816efbe690178cd2da2f6cbec381dcb1410540e0c75e8ce0",
+      "runs/round63_boundary_paths_v1/metadata.json": "47d8bb174d19f2c223ca1a5ee68d97b9b7a9d64ca1977f07b8b22ddc939672dc",
+      "runs/round68_boundary_paths_v1/parameter_lock.json": "010816344933acfa1b1905243d4937278235618a035a38183b9ac29e3c049159",
+      "runs/round69_measurement_support_v1/parameter_lock.json": "45fad26bc4e35031a5ef73a6a30a2b97a54d26cacefea91013ac2c18fe808f76",
+      "runs/round69_measurement_support_v1/delivery.json": "15807c430c3d7a7ebb436e31ac6fc63c815a5c8509cd6a51557d5f747d64e1ab",
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/umud_baseline/apo_baseline.py": "d791c0931fae02034b55bd7bbbf241a79c33e1fb6bb097676c2d859dd0dfbf5d",
+      "src/umud_baseline/audit.py": "579c7b8012e58d11aa500df71abb855cc627c7e67e8cd907c87438a4bd0d31aa",
+      "src/umud_baseline/boundary_identity.py": "262840f003d49455d74dc98b7ad2135995102e394425d51051edc68763f633e6",
+      "src/umud_baseline/data.py": "0e60a305f7ae411b68dbef0912dce5300447f5ac3159bb7076c60ce5bdbcf9c3",
+      "src/umud_baseline/direction_data.py": "27fa7933e782c0075d097a25936e7ac5aeeeb736169851eac20c154efb3fa472",
+      "src/umud_baseline/direction_model.py": "9de15770c140d0b07b540c2b469b06f8047a6baafdf6eb6a775091f77a011a4d",
+      "src/umud_baseline/evaluate.py": "c8e4cb748217c76a8e90b4084a9b9b09bca3e053dbcb980e4234288a88726a0f",
+      "src/umud_baseline/fallmud_guard.py": "507d1d620f3e9ec73cddbb0fcd0fe05e442faa3c4d783755a34061c0a67ef222",
+      "src/umud_baseline/geometry.py": "5299218c11afd8c5fdd214f7ccb5d56a5b24978d9214bb45e58e279ca0da3f81",
+      "src/umud_baseline/label_audit.py": "38f8f90a8119f6c72645fc76f4bc3d068aad5097536e6d35bfc482453fb1d2d2",
+      "src/umud_baseline/predict.py": "3bf7b8638d7512d9246aa511015f1a1f2833af2e344d6c943e2935769037bf1d",
+      "src/umud_baseline/train.py": "3dfab37963479b6a3da519603de0653e805bea5d15866238ec0928f0c59abb2d",
+      "src/umud_baseline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scripts/round70_geometry.py": "bae9d720fa46337c94f5ed180536edda9569f106293c4fab83a5712b7cd8823c",
+      "scripts/round70_fit.py": "a4d28c9f1a03e8d23795d1fd9efdca440d3641439d556593e443a82918300a9e",
+      "scripts/round70_j.py": "c570a31268caacae0cd073526622cc2f136f9499f15a9c85173718d30d236882",
+      "scripts/round70_controls.py": "890b4025d42d204c31082d54193bcda3570b14844f16d679d51fe606adda8c53",
+      "scripts/round70_work.py": "6c8fa69ac370cf161361469efad4588ddf12f66bb45a76af0ff2b91c207492bd",
+      "scripts/round68_geometry.py": "c48ef4796e95b52a634737aaba8749497a54066d6e0ec5f81dbd5499841d9cd9",
+      "scripts/round69_core.py": "3912486b0f28a9cb4d57cb929f4835dbd3cb66cfa91aed497ebccb075e9829e0",
+      "scripts/round56_boundary.py": "68886d5909c592c18b6af907d7b53beada36d0a35cb78e17b400e8e3c72d9102",
+      "scripts/round65_measure.py": "74ca83589739ebf8d15ddbe1a7d36fb6d0def6b6dd4cb47a86d84ed5a7795400",
+      "scripts/round64_measure_adapter.py": "297a32b8d43973d43e62c3e6c1f33e96c6d3c087ed9b9cb1972ee2d1dab2cd04",
+      "runs/round70_WJ_fidelity_v1/protocol.json": "4799f5ef82317a3d91c0f4f3c751071c84dde5026be17d568038225c5a94d350",
+      "runs/round70_WJ_fidelity_v1/calibration.json": "c91736f0c375c90218545020ed34f7a86605227cb8ea8af1467bd6c6dea01c98",
+      "runs/round70_WJ_fidelity_v1/calibration_scoped.json": "112e7f407772d8e3b71b2158ff010928c6fd5c9dc5abd4e5ac494f32423122a5",
+      "scripts/round70_control_kernels.py": "e1a19cd2b0f7fc35a61cea05adf6b79a7631d0a55a09cdbe2c7672330629954a",
+      "scripts/round70_scope_audit.py": "a5367da5cd8bb0f337fdaaa020735c6ee05b18c1c5c44dfb756e19fae6ed955f",
+      "scripts/round70_confirm.py": "b1a376fe53eda86bf5ae9eaf77c87c5f68c88ee470376a85034c88884fa829b6"
+    },
+    "independent_confirmation": "W historical confirmation runs independently; F/J failed, full combination remains shadow",
+    "training": false,
+    "default_changed": false,
+    "subagents": false,
+    "known_cases_not_for_tuning": true
+  },
+  "runs/round71_full_boundary_completion_v1/parameter_lock.json": {
+    "selected": {
+      "decay_width": 0.1
+    },
+    "qualified": false,
+    "shadow_only": true,
+    "protocol_sha": "de69639267ce1a7b24fef7432f1a9eb331606baa7d3ceb8de70f4237a9990c09",
+    "calibration_sha": "8056b4ce28a4f3f50f4d9721488a7223c965c42251c14e8353b4538609411324",
+    "uncertainty_multiplier": {
+      "0": [
+        {
+          "lo": 0,
+          "hi": 0.05,
+          "multiplier": 1.0,
+          "source_case_bins": 672
+        },
+        {
+          "lo": 0.05,
+          "hi": 0.1,
+          "multiplier": 1.238664776856359,
+          "source_case_bins": 610
+        },
+        {
+          "lo": 0.1,
+          "hi": 0.2,
+          "multiplier": 1.685346225777546,
+          "source_case_bins": 384
+        },
+        {
+          "lo": 0.2,
+          "hi": 0.35,
+          "multiplier": 2.781744079616509,
+          "source_case_bins": 192
+        },
+        {
+          "lo": 0.35,
+          "hi": 2.0,
+          "multiplier": 6.8941504964513225,
+          "source_case_bins": 96
+        }
+      ],
+      "1": [
+        {
+          "lo": 0,
+          "hi": 0.05,
+          "multiplier": 1.0,
+          "source_case_bins": 672
+        },
+        {
+          "lo": 0.05,
+          "hi": 0.1,
+          "multiplier": 1.3807827719316028,
+          "source_case_bins": 610
+        },
+        {
+          "lo": 0.1,
+          "hi": 0.2,
+          "multiplier": 1.9429090410940584,
+          "source_case_bins": 384
+        },
+        {
+          "lo": 0.2,
+          "hi": 0.35,
+          "multiplier": 3.839589412767572,
+          "source_case_bins": 192
+        },
+        {
+          "lo": 0.35,
+          "hi": 2.0,
+          "multiplier": 3.440627517701743,
+          "source_case_bins": 96
+        }
+      ]
+    },
+    "protected": {
+      "thinking/ROUND71_FULL_COMPLETION_PLAN_20261109.txt": "cdd51d485b23f1ff260a1df2916a550829d9705e01f484c0601d3fa5ae68fd0a",
+      "thinking/FULL_BOUNDARY_COMPLETION_REQUIREMENTS_20261109.txt": "f01a8ffe40297a6b384761c6ad8d72531ef44521ecf2745028835f8b4ffdf0c5",
+      "runs/round63_boundary_paths_v1/inputs.json": "4984381463c709fe816efbe690178cd2da2f6cbec381dcb1410540e0c75e8ce0",
+      "runs/round63_boundary_paths_v1/metadata.json": "47d8bb174d19f2c223ca1a5ee68d97b9b7a9d64ca1977f07b8b22ddc939672dc",
+      "runs/round68_boundary_paths_v1/parameter_lock.json": "010816344933acfa1b1905243d4937278235618a035a38183b9ac29e3c049159",
+      "runs/round70_WJ_fidelity_v1/delivery.json": "96e04db71c5d8d8c914071a9bc46597ade5896466c24d95e68fd38c85c8aee83",
+      "runs/round62_augmentation_quality_v1/training/20261023/C/epoch_06_model.pt": "e50a5c7889b371e074b62e13a528e874681fa6957a028e96fe9dec8a3dbba44a",
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/umud_baseline/apo_baseline.py": "d791c0931fae02034b55bd7bbbf241a79c33e1fb6bb097676c2d859dd0dfbf5d",
+      "src/umud_baseline/audit.py": "579c7b8012e58d11aa500df71abb855cc627c7e67e8cd907c87438a4bd0d31aa",
+      "src/umud_baseline/boundary_identity.py": "262840f003d49455d74dc98b7ad2135995102e394425d51051edc68763f633e6",
+      "src/umud_baseline/data.py": "0e60a305f7ae411b68dbef0912dce5300447f5ac3159bb7076c60ce5bdbcf9c3",
+      "src/umud_baseline/direction_data.py": "27fa7933e782c0075d097a25936e7ac5aeeeb736169851eac20c154efb3fa472",
+      "src/umud_baseline/direction_model.py": "9de15770c140d0b07b540c2b469b06f8047a6baafdf6eb6a775091f77a011a4d",
+      "src/umud_baseline/evaluate.py": "c8e4cb748217c76a8e90b4084a9b9b09bca3e053dbcb980e4234288a88726a0f",
+      "src/umud_baseline/fallmud_guard.py": "507d1d620f3e9ec73cddbb0fcd0fe05e442faa3c4d783755a34061c0a67ef222",
+      "src/umud_baseline/geometry.py": "5299218c11afd8c5fdd214f7ccb5d56a5b24978d9214bb45e58e279ca0da3f81",
+      "src/umud_baseline/label_audit.py": "38f8f90a8119f6c72645fc76f4bc3d068aad5097536e6d35bfc482453fb1d2d2",
+      "src/umud_baseline/predict.py": "3bf7b8638d7512d9246aa511015f1a1f2833af2e344d6c943e2935769037bf1d",
+      "src/umud_baseline/train.py": "3dfab37963479b6a3da519603de0653e805bea5d15866238ec0928f0c59abb2d",
+      "src/umud_baseline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scripts/round71_common.py": "bf2849c480540b3e455fafbecba17eb45b7574bd34879ac2a24bec1098ed02ed",
+      "scripts/round71_geometry.py": "f9754027b2e3a06df6a94b645082bd6de724a8b686c6244057c6e366bd547b30",
+      "scripts/round71_roi.py": "1c926a8ab403a0d14f8836e08c74e270338b929122ad4abe7299c86911619a46",
+      "scripts/round71_controls.py": "cbedb78dabf7fb64fd108ab3defae13bbab39c47f13de6d57d989770684959f9",
+      "scripts/round70_geometry.py": "bae9d720fa46337c94f5ed180536edda9569f106293c4fab83a5712b7cd8823c",
+      "scripts/round66_geometry.py": "41a4a8be58361a46f20e925c06a3308f292fe4a6efcd213ec80d2d441cb900f5"
+    },
+    "selected_before_development_scoring": true
+  },
+  "runs/round72_penalty_core_v1/parameter_lock.json": {
+    "selected": {
+      "endpoint_z": 3.0,
+      "decay_width": 0.1
+    },
+    "protected": {
+      "thinking/ROUND72_PENALTY_CORE_PLAN_20261109.txt": "7442a246691a501f520ffe512016940edb622b3bd070180482ceb660b48539ce",
+      "runs/round71_full_boundary_completion_v1/parameter_lock.json": "24890d3c0c94217958358720498d2f9226f13a50ea2bdbc4427596a4a0016755",
+      "runs/round71_full_boundary_completion_v1/delivery.json": "5ed6adc74de69e2e36ca87b268a617f575447075937ba849f32390380e335014",
+      "runs/round71_full_boundary_completion_v1/domain_manifest.json": "3ab8cf3d8f4680f02923b6a4b4f83d3f97a0ef7e8697f9175a4019340f9a2170",
+      "runs/round63_boundary_paths_v1/inputs.json": "4984381463c709fe816efbe690178cd2da2f6cbec381dcb1410540e0c75e8ce0",
+      "runs/round63_boundary_paths_v1/metadata.json": "47d8bb174d19f2c223ca1a5ee68d97b9b7a9d64ca1977f07b8b22ddc939672dc",
+      "runs/round62_augmentation_quality_v1/training/20261023/C/epoch_06_model.pt": "e50a5c7889b371e074b62e13a528e874681fa6957a028e96fe9dec8a3dbba44a",
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/umud_baseline/apo_baseline.py": "d791c0931fae02034b55bd7bbbf241a79c33e1fb6bb097676c2d859dd0dfbf5d",
+      "src/umud_baseline/audit.py": "579c7b8012e58d11aa500df71abb855cc627c7e67e8cd907c87438a4bd0d31aa",
+      "src/umud_baseline/boundary_identity.py": "262840f003d49455d74dc98b7ad2135995102e394425d51051edc68763f633e6",
+      "src/umud_baseline/data.py": "0e60a305f7ae411b68dbef0912dce5300447f5ac3159bb7076c60ce5bdbcf9c3",
+      "src/umud_baseline/direction_data.py": "27fa7933e782c0075d097a25936e7ac5aeeeb736169851eac20c154efb3fa472",
+      "src/umud_baseline/direction_model.py": "9de15770c140d0b07b540c2b469b06f8047a6baafdf6eb6a775091f77a011a4d",
+      "src/umud_baseline/evaluate.py": "c8e4cb748217c76a8e90b4084a9b9b09bca3e053dbcb980e4234288a88726a0f",
+      "src/umud_baseline/fallmud_guard.py": "507d1d620f3e9ec73cddbb0fcd0fe05e442faa3c4d783755a34061c0a67ef222",
+      "src/umud_baseline/geometry.py": "5299218c11afd8c5fdd214f7ccb5d56a5b24978d9214bb45e58e279ca0da3f81",
+      "src/umud_baseline/label_audit.py": "38f8f90a8119f6c72645fc76f4bc3d068aad5097536e6d35bfc482453fb1d2d2",
+      "src/umud_baseline/predict.py": "3bf7b8638d7512d9246aa511015f1a1f2833af2e344d6c943e2935769037bf1d",
+      "src/umud_baseline/train.py": "3dfab37963479b6a3da519603de0653e805bea5d15866238ec0928f0c59abb2d",
+      "src/umud_baseline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scripts/round72_common.py": "eb560cb724b355ebe869ed33ecdeb98b250985dc02e5dce825749f2689639d23",
+      "scripts/round72_geometry.py": "b1f7fdd1e9f736f48b88a9aa93238a74b6d06143637193c1b8974793b7832807",
+      "scripts/round72_controls.py": "895cd20786abff1d60c04238afe728f2044a481c989a765dc9d0ef3f68e64b29",
+      "scripts/round71_geometry.py": "f9754027b2e3a06df6a94b645082bd6de724a8b686c6244057c6e366bd547b30",
+      "scripts/round66_geometry.py": "41a4a8be58361a46f20e925c06a3308f292fe4a6efcd213ec80d2d441cb900f5"
+    },
+    "calibration_sha": "8a695d055ff6192d4553cd7d76c2c9b733deda99d55b739311c12e4df5a249d2",
+    "qualified": false,
+    "shadow_only": true,
+    "uncertainty_multiplier": {
+      "0": 2.1328994103519805,
+      "1": 3.432169210480611
+    },
+    "selected_before_development": true
+  },
+  "runs/round74_permission_scoring_v1/parameter_lock.json": {
+    "selected": {
+      "permission_z": 1.5,
+      "quarantine_fraction": 0.08,
+      "decay_width": 0.1
+    },
+    "selected_index": 1,
+    "quality_passed": false,
+    "permission_passed": true,
+    "protected": {
+      "scripts/round74_common.py": "64daf7e30b2ca847a858d28f0d82f05e388e062d39311e85129a5d8992fa951f",
+      "scripts/round74_geometry.py": "20b2d186714f3c3e4e8505d625f00415b65c37c19da6095230c400d3fdbfb0fc",
+      "scripts/round74_controls.py": "7e1293349ec56404bb4a1210de496fefd715a5055aa5fc8b78b74ed20175012e",
+      "scripts/round74_mechanical.py": "714de6f5a08c1ad8f4c4a2994fcf5a4ef3edf5fbda6c409a2c91be0034ad3bec",
+      "scripts/round74_run.py": "df68a2699f58f4e0ec9b086c58ec40171b84a5326003877dd300d25f27dca988",
+      "thinking/ROUND74_PERMISSION_SCORING_PLAN_20261110.txt": "267f3a9423bc73b5a50af8cb480492a1342fdf7af7e9ee7c5402a76744839cc1",
+      "runs/round73_isolated_core_v1/parameter_lock.json": "ace0edf8d9ffbcd35de13c4171c82768b9a4d9baded38ea5333d188d23e4a686",
+      "runs/round73_isolated_core_v1/delivery.json": "f5eb33b7671f34b5d83f224d13a6986a175620290abf3e879137ab305aba5e17",
+      "runs/round72_penalty_core_v1/parameter_lock.json": "3fc9c4e393ea85c3612f3e0ee6a278771e53586b9e882951ae126c4867eca6a3",
+      "runs/round63_boundary_paths_v1/inputs.json": "4984381463c709fe816efbe690178cd2da2f6cbec381dcb1410540e0c75e8ce0",
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/umud_baseline/apo_baseline.py": "d791c0931fae02034b55bd7bbbf241a79c33e1fb6bb097676c2d859dd0dfbf5d",
+      "src/umud_baseline/audit.py": "579c7b8012e58d11aa500df71abb855cc627c7e67e8cd907c87438a4bd0d31aa",
+      "src/umud_baseline/boundary_identity.py": "262840f003d49455d74dc98b7ad2135995102e394425d51051edc68763f633e6",
+      "src/umud_baseline/data.py": "0e60a305f7ae411b68dbef0912dce5300447f5ac3159bb7076c60ce5bdbcf9c3",
+      "src/umud_baseline/direction_data.py": "27fa7933e782c0075d097a25936e7ac5aeeeb736169851eac20c154efb3fa472",
+      "src/umud_baseline/direction_model.py": "9de15770c140d0b07b540c2b469b06f8047a6baafdf6eb6a775091f77a011a4d",
+      "src/umud_baseline/evaluate.py": "c8e4cb748217c76a8e90b4084a9b9b09bca3e053dbcb980e4234288a88726a0f",
+      "src/umud_baseline/fallmud_guard.py": "507d1d620f3e9ec73cddbb0fcd0fe05e442faa3c4d783755a34061c0a67ef222",
+      "src/umud_baseline/geometry.py": "5299218c11afd8c5fdd214f7ccb5d56a5b24978d9214bb45e58e279ca0da3f81",
+      "src/umud_baseline/label_audit.py": "38f8f90a8119f6c72645fc76f4bc3d068aad5097536e6d35bfc482453fb1d2d2",
+      "src/umud_baseline/predict.py": "3bf7b8638d7512d9246aa511015f1a1f2833af2e344d6c943e2935769037bf1d",
+      "src/umud_baseline/train.py": "3dfab37963479b6a3da519603de0653e805bea5d15866238ec0928f0c59abb2d",
+      "src/umud_baseline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scripts/round73_geometry.py": "bff7ea4e7cc6301a943a4ab6883c3daa51ccf4544a44ef3cd9ae4daf0afe9798",
+      "scripts/round73_controls.py": "0fb060a8ec96f2a41f62872b9f5e0e9755f0f4f22f75271a73f2409150bb4596",
+      "scripts/round72_geometry.py": "b1f7fdd1e9f736f48b88a9aa93238a74b6d06143637193c1b8974793b7832807",
+      "scripts/round71_geometry.py": "f9754027b2e3a06df6a94b645082bd6de724a8b686c6244057c6e366bd547b30",
+      "scripts/round66_geometry.py": "41a4a8be58361a46f20e925c06a3308f292fe4a6efcd213ec80d2d441cb900f5",
+      "scripts/round71_work.py": "bfa1ca19c49c100614b7e9d3a936e215f48dc6af24310f7b3f7f745d6f2bea9a"
+    },
+    "calibration_sha": "5e70bb7121ba83a39c142aad02d90e9b681f3b95354e478007e0e9ef10d1939d",
+    "selected_before_development": true,
+    "training": false,
+    "inference": false,
+    "default_changed": false,
+    "subagents": false
+  },
+  "runs/round76_adaptive_density_prior_v1/parameter_lock.json": {
+    "selected": {
+      "D": {
+        "config": {
+          "maximum_reward": 0.02,
+          "saturation": 1.0
+        },
+        "passed": false,
+        "positive": 48,
+        "recovered": 0,
+        "protected": 96,
+        "regressions": 47,
+        "normal_changes": 0
+      },
+      "T": {
+        "config": {
+          "maximum_penalty": 0.4,
+          "shoulder_mm": 2.0
+        },
+        "passed": true,
+        "positive": 48,
+        "recovered": 48,
+        "protected": 96,
+        "regressions": 0,
+        "normal_changes": 0
+      },
+      "A": {
+        "config": {
+          "retain_fraction": 0.8,
+          "tie_margin_roi": 0.01
+        },
+        "passed": true,
+        "sources": 48,
+        "constructed_MSE_before": 225.0,
+        "constructed_MSE_after": 144.0
+      }
+    },
+    "before_confirmation": true,
+    "validation_read": false
+  },
+  "runs/round80_connection_fidelity_v1/parameter_lock.json": {
+    "selected": {
+      "C": {
+        "config": {
+          "endpoint_window": 0.12,
+          "required_probability_hit": 0.5
+        },
+        "cases": 1344,
+        "positive": 576,
+        "mean_correct_coverage_gain": 0.0,
+        "negative_false_connections": 11,
+        "wrong_positive_bridges": 0,
+        "normal_changes": 0,
+        "added_cases": 11,
+        "passed": false
+      },
+      "R": {
+        "config": {},
+        "cases": 192,
+        "positive": 48,
+        "recovered": 48,
+        "protected_regressions": 0,
+        "normal_changes": 0,
+        "unknown_cases": 48,
+        "passed": true
+      },
+      "G": {
+        "config": {},
+        "cases": 480,
+        "finite_geometry_exact": true,
+        "external_rays_unchanged": true,
+        "geometry_MAE_before": 0.40892019354834935,
+        "geometry_MAE_after": 0.0,
+        "new_missing_FL": 60,
+        "controlled_FL_error_before": 0.9564877393949817,
+        "controlled_FL_error_after": 0.0978220298398071,
+        "passed": false
+      }
+    },
+    "before_confirmation": true,
+    "validation112_used": false
+  },
+  "Round77_prior": {
+    "maximum_penalty": 0.4,
+    "shoulder_mm": 2.0,
+    "outside": [
+      10.0,
+      31.0
+    ],
+    "mode": "additional_to_old_prior_not_replacement"
+  }
+}

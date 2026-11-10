@@ -1,0 +1,86 @@
+{
+  "round": 64,
+  "status": "draft_not_executed_not_parameter_lock",
+  "plan": "thinking/ROUND64_BOUNDARY_CONTINUATION_PLAN_20261109.txt",
+  "training": false,
+  "change_default": false,
+  "subagents": false,
+  "primary_boundary": {
+    "checkpoint": "runs/round62_augmentation_quality_v1/training/20261023/C/epoch_06_model.pt",
+    "seed": 20261023,
+    "number_of_seeds": 1
+  },
+  "primary_c1": "B_20261023",
+  "diagnostics_before_development": [
+    "R63_P_E_fixed_contributors_vs_reselection",
+    "R63_P_E_fixed_terminal_tangent_vs_new_tangent",
+    "role_vs_role_union_by_strong_vs_weak_2x2"
+  ],
+  "modules": {
+    "B": "interval_or_ridge_candidates_with_bounded_second_order_path_search",
+    "S": "confidence_anchor_window_reconstruction_with_weak_tail_adjustment",
+    "X": "incremental_evidence_guided_damped_curvature_continuation"
+  },
+  "arms": {
+    "D": "existing_decoder_same_frozen_probabilities_and_measurement_chain",
+    "R": "frozen_Round63_P_geometry",
+    "Q": "R_plus_isolated_qualified_probability_or_eligibility_correction_or_exact_R_alias",
+    "B": "Q_plus_B",
+    "S": "Q_plus_S",
+    "X": "Q_plus_X",
+    "BS": "Q_plus_B_plus_S",
+    "BSX": "Q_plus_B_plus_S_plus_X"
+  },
+  "parameter_development": {
+    "control_source_images": 48,
+    "remaining_control_source_images": 624,
+    "historical_development_images": 138,
+    "historical_confirmation_images": 331,
+    "group_isolation": true,
+    "candidate_extension_fractions": [0.04, 0.08, 0.12],
+    "other_parameters": "determine_from_training_controls_and_development_then_lock_before_confirmation"
+  },
+  "initial_evaluation": {
+    "original_images": 469,
+    "manual_boundary_images": 143,
+    "manual_conditions": 8,
+    "unique_views": 1470,
+    "natural_pairs": 117,
+    "strict_natural_pairs": 18,
+    "both_boundaries": true,
+    "same_probability_between_arms": true,
+    "manual_input_to_decoder": false
+  },
+  "prespecified_engineering_targets": {
+    "controlled_recoverable_positive_correct_fraction": 0.95,
+    "controlled_cross_layer_or_no_evidence_reliable_false_links": 0,
+    "protected_normal_images": 48,
+    "maximum_new_protected_coverage_decline": 0.01,
+    "difficult_cohort_coverage_gain": 0.05,
+    "overall_coverage_difference_ci_lower_bound": -0.005,
+    "recovered_high_confidence_position_correct_fraction": 0.90,
+    "primary_stability_metric": "formal_chain_MT_relative_range_p95",
+    "primary_stability_p95_target_ratio": 0.85,
+    "other_stability_p95_maximum_ratio": 1.05,
+    "new_severe_or_reliable_result_losses_allowed": 0,
+    "interpretation": "proposed_engineering_acceptance_criteria_not_anatomical_facts_or_achieved_results"
+  },
+  "measurement": {
+    "use_existing_frozen_measurement_functions": true,
+    "verify_adapter_baseline_before_comparison": true,
+    "fixed_vs_reselected_contributors_reported_separately": true,
+    "spatial_regions_fixed_to_tissue_domain": true,
+    "imputed_points_are_not_observations": true,
+    "continuation_does_not_automatically_qualify_FL": true,
+    "measurement_eligibility_changes_require_separate_comparison": true
+  },
+  "conditional_expansion": {
+    "only_after_control_and_primary_gates_pass": true,
+    "arms": ["baseline", "selected_candidate"],
+    "existing_perturbation_classes": 26,
+    "both_networks_actually_perturbed": true,
+    "existing_T3_boundary_seeds": [20261023, 20261024],
+    "existing_C1_versions": ["B_20261023", "B_20261024"],
+    "do_not_claim_second_Round62_seed": true
+  }
+}
