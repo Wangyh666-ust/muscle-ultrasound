@@ -1,13 +1,24 @@
 {
-  "status": "publication_before_dependency_checked_cleanup",
   "date": "2026-11-11",
-  "preserve": [
-    "source",
-    "locked parameters",
-    "phase conclusions",
-    "current models",
-    "training sources",
-    "active probability dependencies"
+  "status": "completed_and_verified",
+  "retired_files": 110824,
+  "retired_checkpoint_files": 28,
+  "reclaimed_GiB": 14.785076141357422,
+  "logical_retired_GiB": 14.7343968199566,
+  "source_archive_records": 2670,
+  "protected_files_hashed": 124714,
+  "current_C1_cache_payloads": 27168,
+  "frozen_boundary_views": 1470,
+  "preserved": [
+    "Original data, expert labels, units and split records",
+    "Reviewed672 training sources/673 variants",
+    "Current C62C and both B41 models; latest training controls",
+    "Current inference dependencies and R75–80 results",
+    "Source, parameters, conclusions and current diagnostic galleries"
   ],
-  "local_archive_not_public": true
+  "verification": "Protected SHA checks; source metadata; current submission hash; 6 actual cache/FL replays and4 frozen-boundary reads match before and after",
+  "limitation": "Old cache-heavy galleries and replaced checkpoints are intentionally unavailable; detailed historical replay may require regeneration/retraining. The source snapshot is not a standalone deployment.",
+  "raw_data_models_or_credentials_uploaded": false,
+  "training": false,
+  "default_changed": false
 }
